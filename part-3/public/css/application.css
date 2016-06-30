@@ -1,0 +1,109 @@
+.register-login-header {
+
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar-home {
+    float: left;
+}
+
+#navbar-list {
+    float: right;
+}
+
+#navbar-list #navbar-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar-home #navbar-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar-list #navbar-link:hover {
+    background-color: #111;
+}
+
+#page-container {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 24px;
+    border-radius: 5px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#price-label {
+    text-decoration: underline;
+}
+
+#price {
+    font-weight: bold;
+}
+
+input {
+    margin: 2px 0 2px 2px;
+}
+
+label {
+    background-color: #555555;
+    padding: 3px 24px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=email]:focus {
+    border: 3px solid #555;
+}
+
+input[type=password]:focus {
+    border: 3px solid #555;
+}
+
+input[type=number]:focus {
+    border: 3px solid #555;
+}
+
+input[type=datetime-local]:focus {
+    border: 3px solid #555;
+}
+
+.item-design {
+    border: 1px solid #333;
+    width: 50%;
+    border-radius: 15px;
+}
+
+#item-content {
+    margin-left: 10px;
+}
