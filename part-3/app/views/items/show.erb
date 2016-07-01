@@ -52,16 +52,20 @@
     </ul>
     <% end %>
   <% if logged_in? %>
-    <% if current_user.id != @item.seller.id %>
-      <form class="bid-on-item" action="/items/<%=@item.id%>/bids/new" method="post">
-        <input name="bid_amount" type="number" step="any">
-        <br>
-        <p> Remember your bid must be higher than the current price </p>
-        <br>
-        <input class="button" type="submit" value="Submit Bid">
-      </form>
+    <% if Time.now < @item.end_time %>
+      <% if current_user.id != @item.seller.id %>
+        <form class="bid-on-item" action="/items/<%=@item.id%>/bids/new" method="post">
+          <input name="bid_amount" type="number" step="any">
+          <br>
+          <p> Remember your bid must be higher than the current price </p>
+          <br>
+          <input class="button" type="submit" value="Submit Bid">
+        </form>
       <% else %>
-      <p> Silly, you can't bid on your own item </p>
+        <p> Silly, you can't bid on your own item </p>
+      <% end %>
+    <% else %>
+      <p> Bidding on this item has ended </p>
     <% end %>
   <% end %>
   <br><br>

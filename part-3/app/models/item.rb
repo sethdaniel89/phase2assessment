@@ -11,9 +11,11 @@ class Item < ActiveRecord::Base
 
   def post_time
      self.end_time > self.start_time
+     @errors = ["The end time for the item must be after the start time."]
   end
 
   def start
     self.start_time > Time.now
+    @errors = ["The start time for the item must be after the current time."]
   end
 end
